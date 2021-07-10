@@ -1,14 +1,14 @@
 package br.com.cestafacil;
 
 import java.math.BigInteger;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Dados {
-	
-	static Map<String, Pessoa> pessoa = new HashMap<String, Pessoa>();
-	static Map<String, Empresa> empresa = new HashMap<String, Empresa>();
+
+	public static List<Pessoa> pessoas = new ArrayList<Pessoa>();
+	public static List<Empresa> empresas = new ArrayList<Empresa>();
 
 	private static boolean validarCpf(String cpf, boolean printar) {
 		try {
@@ -29,11 +29,11 @@ public class Dados {
 		return true;
 	}
 
-	public static Pessoa cadastrarPessoa() {
+	public static void cadastrarPessoa() {
 		Scanner read = new Scanner(System.in);
 
-		Pessoa pessoa1 = new Pessoa();
-		
+		pessoas.add(pessoas.size(), new Pessoa());
+
 		System.out.println("================");
 		System.out.println("Cadastro de pessoa");
 		System.out.println("================");
@@ -44,22 +44,29 @@ public class Dados {
 			cpf = read.next();
 			validarCpf(cpf, true);
 		}
-		pessoa1.setCpf(cpf);
+		pessoas.get(pessoas.size() - 1).setCpf(cpf);
 
 		System.out.print("Digite seu nome: ");
-		pessoa1.setNome(read.next());
+		pessoas.get(pessoas.size() - 1).setNome(read.next());
 
 		System.out.print("Digite seu sobrenome: ");
-		pessoa1.setSobrenome(read.next());
+		pessoas.get(pessoas.size() - 1).setSobrenome(read.next());
 		
-		pessoa.put(cpf, pessoa1);
-		
-		return pessoa1;
+		System.out.println("Cadastro realizado com sucesso!");
 	}
-	
-	public static Empresa cadastrarEmpresa() {
-		Empresa empresa1 = new Empresa();
-		return empresa1;
+
+	public static void cadastrarEmpresa() {
+		Scanner read = new Scanner(System.in);
+
+		empresas.add(empresas.size(), new Empresa());
+
+		String cnpj = "";
+		while (validarCpf(cnpj, false) == false) {
+			System.out.print("Digite seu CPF: ");
+			cnpj = read.next();
+			validarCpf(cnpj, true);
+		}
+		empresas.get(empresas.size() - 1).setCnpj(cnpj);
 	}
 
 	public static void login() {

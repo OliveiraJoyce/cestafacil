@@ -3,9 +3,13 @@ package br.com.cestafacil;
 import java.util.Scanner;
 
 public class Main {
+	
 
 	public static void main(String[] args) {
 		telaInicial();
+		telaInicial();
+		System.out.println(Dados.pessoas.get(0).getCpf());
+		System.out.println(Dados.pessoas.get(1).getCpf());
 	}
 	
 	static void telaInicial() {
