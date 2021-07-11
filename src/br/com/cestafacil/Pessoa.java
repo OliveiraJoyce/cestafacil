@@ -27,6 +27,11 @@ public class Pessoa extends Doador {
 	void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}
+	
+	String getNomeCompleto() {
+		String nomeCompleto = this.nome + " " + this.sobrenome;
+		return nomeCompleto;
+	}
 
 	String getSenha() {
 		return senha;
