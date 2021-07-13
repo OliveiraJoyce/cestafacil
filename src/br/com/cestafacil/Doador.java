@@ -25,36 +25,36 @@ public class Doador {
 		System.out.println("\nLogado como: " + info);
 		for (int i = 0; i < alimentoNome.length; i++) {
 			System.out.print("\nDigite a quantidade de " + alimentoNome[i] + ": ");
-			int quantidade = read.nextInt();
+			int quantidade = Integer.parseInt(read.nextLine());
 			switch (i) {
-			case 1:
+			case 0:
 				Cesta.arroz += quantidade;
 				break;
-			case 2:
+			case 1:
 				Cesta.feijao += quantidade;
 				break;
-			case 3:
+			case 2:
 				Cesta.acucar += quantidade;
 				break;
-			case 4:
+			case 3:
 				Cesta.macarrao += quantidade;
 				break;
-			case 5:
+			case 4:
 				Cesta.oleo += quantidade;
 				break;
-			case 6:
+			case 5:
 				Cesta.cafe += quantidade;
 				break;
-			case 7:
+			case 6:
 				Cesta.paodeforma += quantidade;
 				break;
-			case 8:
+			case 7:
 				Cesta.farinha += quantidade;
 				break;
-			case 9:
+			case 8:
 				Cesta.sal += quantidade;
 				break;
-			case 10:
+			case 9:
 				Cesta.molho += quantidade;
 				break;
 			}
@@ -63,6 +63,9 @@ public class Doador {
 		System.out.print("Deseja doar mais algum alimento? 1 - sim  2 - não: ");
 		if (read.nextInt() == 1)
 			doar(tipo, doc);
+		
+		Cesta.contagemCesta();
+		System.out.println("\nConseguimos montar " + Cesta.cestas + " cestas básicas completas!\n");
 
 		System.out.println("\n-----------------------\n" + "Agradecemos pela doação!\n-----------------------\n");
 		Main.main(null);

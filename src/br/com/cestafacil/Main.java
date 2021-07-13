@@ -34,7 +34,7 @@ public class Main {
 	}
 
 	static void telaInicial() {
-		System.out.println("------------------ Cesta FÃ¡cil ------------------");
+		System.out.println("------------------ Cesta Fácil ------------------");
 		System.out.println("\n1 - Cadastro de pessoa         2 - Cadastro de empresa");
 		System.out.println("3 - Login                      4 - Doar alimentos");
 		System.out.println("5 - Mostrar cestas");
