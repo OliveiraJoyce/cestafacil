@@ -55,6 +55,6 @@ public class Cesta {
 		while (checkCestas()) {
 			montarCesta();
 		}
-		System.out.println("\nConseguimos montar " + cestas + " cestas b√°sicas completas!\n");
+		System.out.println("\nConseguimos montar " + cestas + " cestas b·sicas completas!\n");
 	}
 }

@@ -27,5 +27,4 @@ public class Empresa extends Doador {
 	void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
-
 }

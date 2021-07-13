@@ -19,66 +19,52 @@ public class Doador {
 			info = target.getNome();
 			info += " | CNPJ: " + target.getCnpj();
 		}
-
-		System.out.println("\n-------- Doa√ß√£o de Alimentos --------");
+		String[] alimentoNome = { "arroz", "feij„o", "aÁ˙car", "macarr„o", "Ûleo", "cafÈ", "p„o de forma", "farinha",
+				"sal", "molho de tomate" };
+		System.out.println("\n-------- DoaÁ„o de Alimentos --------");
 		System.out.println("\nLogado como: " + info);
-		System.out.println("\n1 - Arroz            2 - Feij√£o");
-		System.out.println("3 - A√ß√∫car           4 - Macarr√£o");
-		System.out.println("5 - √ìleo             6 - Caf√©");
-		System.out.println("7 - P√£o de forma     8 - Farinha");
-		System.out.println("9 - Sal              10 - Molho de tomate");
-		System.out.print("\nEscolha o tipo de alimento: ");
-
-		int alimento;
-		while (true) {
-			alimento = read.nextInt();
-			if (alimento < 1 || alimento > 10) {
-				System.out.print("Op√ß√£o inv√°lida, tente novamente: ");
-			} else {
+		for (int i = 0; i < alimentoNome.length; i++) {
+			System.out.print("\nDigite a quantidade de " + alimentoNome[i] + ": ");
+			int quantidade = read.nextInt();
+			switch (i) {
+			case 1:
+				Cesta.arroz += quantidade;
+				break;
+			case 2:
+				Cesta.feijao += quantidade;
+				break;
+			case 3:
+				Cesta.acucar += quantidade;
+				break;
+			case 4:
+				Cesta.macarrao += quantidade;
+				break;
+			case 5:
+				Cesta.oleo += quantidade;
+				break;
+			case 6:
+				Cesta.cafe += quantidade;
+				break;
+			case 7:
+				Cesta.paodeforma += quantidade;
+				break;
+			case 8:
+				Cesta.farinha += quantidade;
+				break;
+			case 9:
+				Cesta.sal += quantidade;
+				break;
+			case 10:
+				Cesta.molho += quantidade;
 				break;
 			}
 		}
 
-		System.out.print("Digite a quantidade: ");
-		int quantidade = read.nextInt();
-
-		switch (alimento) {
-		case 1:
-			Cesta.arroz += quantidade;
-			break;
-		case 2:
-			Cesta.feijao += quantidade;
-			break;
-		case 3:
-			Cesta.acucar += quantidade;
-			break;
-		case 4:
-			Cesta.macarrao += quantidade;
-			break;
-		case 5:
-			Cesta.oleo += quantidade;
-			break;
-		case 6:
-			Cesta.cafe += quantidade;
-			break;
-		case 7:
-			Cesta.paodeforma += quantidade;
-			break;
-		case 8:
-			Cesta.farinha += quantidade;
-			break;
-		case 9:
-			Cesta.sal += quantidade;
-		case 10:
-			Cesta.molho += quantidade;
-		}
-
-		System.out.print("Deseja doar mais algum alimento? 1 - sim  2 - n√£o: ");
+		System.out.print("Deseja doar mais algum alimento? 1 - sim  2 - n„o: ");
 		if (read.nextInt() == 1)
 			doar(tipo, doc);
 
-		System.out.println("\n-----------------------\n"
-				+ "Obrigado pela doa√ß√£o!\n-----------------------\n");
+		System.out.println("\n-----------------------\n" + "Agradecemos pela doaÁ„o!\n-----------------------\n");
 		Main.main(null);
 	}
 

@@ -40,7 +40,7 @@ public class Main {
 		System.out.println("5 - Mostrar cestas");
 		System.out.println("\n-------------------------------------------------");
 
-		System.out.print("\nOpÃ§Ã£o: ");
+		System.out.print("\nOpção: ");
 		getOpcao();
 	}
 
@@ -77,7 +77,7 @@ public class Main {
 				break;
 			} else {
 				System.out.println("\n-----------------------\n"
-						+ "VocÃª nÃ£o estÃ¡ logado\n-----------------------\n");
+						+ "Você não está logado\n-----------------------\n");
 				main(null);
 			}
 		case 5:
