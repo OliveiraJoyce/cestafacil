@@ -59,14 +59,16 @@ public class Doador {
 				break;
 			}
 		}
+		
+		Cesta.contagemCesta();
+		System.out.println("_______________________________"
+				+ "\n\nConseguimos montar " + Cesta.getCestas() + " cestas básicas completas!\n"
+						+ "_______________________________\n");
+		Cesta.alimentosRestantes();
 
-		System.out.print("Deseja doar mais algum alimento? 1 - sim  2 - não: ");
+		System.out.print("\nDeseja doar mais algum alimento? 1 - sim  2 - não: ");
 		if (read.nextInt() == 1)
 			doar(tipo, doc);
-
-		Cesta.contagemCesta();
-		System.out.println("\nConseguimos montar " + Cesta.getCestas() + " cestas básicas completas!\n");
-		Cesta.alimentosRestantes();
 
 		System.out.println("\n-----------------------\n" + "Agradecemos pela doação!" + "\n-----------------------\n");
 		Main.main(null);

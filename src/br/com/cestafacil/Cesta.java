@@ -56,7 +56,7 @@ public class Cesta {
 			if (macarrao != 0)
 				System.out.println(macarrao + " pacotes de macarrão");
 			if (oleo != 0)
-				System.out.println(oleo + " garrafas de óleo");
+				System.out.println(oleo + " litros de óleo");
 			if (cafe != 0)
 				System.out.println(cafe + " pacotes de café");
 			if (paodeforma != 0)
