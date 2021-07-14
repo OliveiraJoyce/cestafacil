@@ -44,19 +44,30 @@ public class Cesta {
 		}
 	}
 
-	/*
-	 * public static void alimentosRestantes() { if (arroz + feijao + acucar +
-	 * macarrao + oleo + cafe + paodeforma + farinha + sal + molho != 0) {
-	 * System.out.println("Sobraram..."); if (arroz != 0) System.out.println(arroz +
-	 * " pacotes de arroz"); if (feijao != 0) System.out.println(feijao +
-	 * " pacotes de feijão"); if (acucar != 0) System.out.println(acucar +
-	 * " pacotes de arroz"); if (macarrao != 0) System.out.println(macarrao +
-	 * " pacotes de macarrão"); if (oleo != 0) System.out.println(oleo +
-	 * " garrafas de óleo"); if (cafe != 0) System.out.println(cafe +
-	 * " pacotes de café"); if (paodeforma != 0) System.out.println(paodeforma +
-	 * " pacotes de pão de forma"); if (farinha != 0) System.out.println(farinha +
-	 * " pacotes de farinha"); if (sal != 0) System.out.println(sal +
-	 * " pacotes de sal"); if (molho != 0) System.out.println(molho +
-	 * " pacotes de molho de tomate"); } }
-	 */
+	public static void alimentosRestantes() {
+		if (arroz + feijao + acucar + macarrao + oleo + cafe + paodeforma + farinha + sal + molho != 0) {
+			System.out.println("Sobraram...");
+			if (arroz != 0)
+				System.out.println(arroz + " pacotes de arroz");
+			if (feijao != 0)
+				System.out.println(feijao + " pacotes de feijão");
+			if (acucar != 0)
+				System.out.println(acucar + " pacotes de arroz");
+			if (macarrao != 0)
+				System.out.println(macarrao + " pacotes de macarrão");
+			if (oleo != 0)
+				System.out.println(oleo + " garrafas de óleo");
+			if (cafe != 0)
+				System.out.println(cafe + " pacotes de café");
+			if (paodeforma != 0)
+				System.out.println(paodeforma + " pacotes de pão de forma");
+			if (farinha != 0)
+				System.out.println(farinha + " pacotes de farinha");
+			if (sal != 0)
+				System.out.println(sal + " pacotes de sal");
+			if (molho != 0)
+				System.out.println(molho + " pacotes de molho de tomate");
+		}
+	}
+
 }
