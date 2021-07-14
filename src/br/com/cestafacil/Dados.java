@@ -217,7 +217,8 @@ public class Dados {
 		pessoas.get(cpf).setSenha(senha);
 
 		System.out.println(
-				"\n----------------------------\nCadastro realizado com sucesso!\n----------------------------");
+				"\n----------------------------\nCadastro realizado com sucesso!"
+				+ "\n----------------------------");
 
 		return cpf;
 	}

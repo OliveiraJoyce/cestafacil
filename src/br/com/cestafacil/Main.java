@@ -81,7 +81,8 @@ public class Main {
 				main(null);
 			}
 		case 5:
-			Cesta.contagemCesta();
+			System.out.println("\nConseguimos montar " + Cesta.getCestas()
+			+ " cestas básicas completas!\n");
 			main(null);
 			break;
 		}
